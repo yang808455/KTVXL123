@@ -1,0 +1,11 @@
+# Keil MDK-ARM build output
+**/Objects/
+**/Listings/
+
+# Keil user-specific configurations
+*.uvguix.*
+*.uvgui.*
+
+# Backup and temporary files
+*.bak
+*.dep
