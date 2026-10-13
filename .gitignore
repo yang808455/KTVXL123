@@ -14,3 +14,6 @@
 **/Proteus/
 *.pdsprj*
 *.workspace
+
+# Office temporary lock files
+~$*

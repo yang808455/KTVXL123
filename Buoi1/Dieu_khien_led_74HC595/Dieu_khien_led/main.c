@@ -1,11 +1,15 @@
 #include "stm32f10x.h"
 
 // ham delay
-void delay(uint32_t ms)
+void delay(uint32_t time)
 {
-    while (ms--)
+    while(time)
     {
-        for (volatile uint32_t i = 0; i < 12000; i++);
+        SysTick->CTRL = 5;
+        SysTick->VAL = 0;
+        SysTick->LOAD = 72000 - 1;
+        while(!(SysTick->CTRL & (1 << 16)));
+        time--;
     }
 }
 
@@ -49,7 +53,7 @@ int main(void)
         delay(1);
         GPIOA->BSRR = (1 << 18);
 
-        delay(1);
+        delay(50);
 
         //tat led
         //PA1 = 0
@@ -70,6 +74,6 @@ int main(void)
         delay(1);
         GPIOA->BSRR = (1 << 18);
 
-        delay(1);
+        delay(50);
     }
 }
