@@ -10,3 +10,7 @@ Repository lưu trữ các bài thực hành môn Kỹ thuật Vi xử lý (STM3
 - **Buoi2**:
   - `TIMER_blink_led`: Tạo độ trễ bằng Timer để nhấp nháy LED
   - `TIMER_PWM`: Điều chế độ rộng xung (PWM) bằng Timer để điều khiển độ sáng LED
+- **Buoi3**:
+  - `On_off_led`: Bật/tắt LED qua giao tiếp UART
+  - `PWM_led`: Điều khiển độ sáng LED (PWM) qua giao tiếp UART
+
